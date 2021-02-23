@@ -1,0 +1,70 @@
+package com.coll.OnlineCollaborate.daoImpl;
+
+import java.util.List;
+
+import com.coll.OnlineCollaborate.dao.IUserDao;
+import com.coll.OnlineCollaborate.model.User;
+
+public class UserDaoImpl implements IUserDao {
+
+	@Override
+	public List<User> userListbyStatus(String status) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<User> getAllusers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User getUserById(int userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User getUserByName(String username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User validateUser(User user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean addUser(User user) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean updateUser(User user) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean deleteUser(int userId) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean deactiveUser(int userId) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean updateUserProfile(String file, Integer userId) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.coil.OnlineCollaborate.config;
+
+public class MvcConfig extends WebMvcConfigurerAdapter {
+
+}

@@ -1,0 +1,5 @@
+package com.coil.OnlineCollaborate.model;
+
+public class DomainResponse {
+
+}
