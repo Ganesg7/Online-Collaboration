@@ -1,0 +1,39 @@
+.main{
+    background: url("image12.jpg") no-repeat;
+    background-position: 110% 4%;
+}
+.main.h4{
+    position: 650px;
+}
+.row {
+    width: 950px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+
+}
+.row * {
+    box-sizing: border-box;
+    
+}
+
+.col-sm-4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.form-control{
+    width:55%;
+    border-radius:5px;
+    border: 2px solid rgba(76, 46, 207, 0.856);
+    font-size: 13px;
+    font-family:monospace;
+    
+    }
+
+
+

@@ -1,0 +1,95 @@
+<h2 style="font-weight: bold; font-style: italic; text-align: center">Registration Form</h2>
+<div class="main">
+    <div class="row">
+        <div class="cols-sm-4">
+            <div [hidden]="submitted" style="width: 400px;">
+                <form [formGroup]="registrationform" (ngSubmit)="register(register)">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" class="form-control" formControlName="firstName" data-toggle="tooltip"
+                            data-placement="right" titel="Enter First Name" placeholder="Enter Your First Name">
+                        <div class="alert alert-info" *ngIf="(FirstName.touched) && (FirstName.invalid)"
+                            style="margin-top: 5px;">
+                            <span *ngIf="FirstName.errors.required">  <strong>First Name</strong> is Required</span>
+                            <span *ngIf="FirstName.errors.minlength">MinLength Error</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" class="form-control" formControlName="lastName" data-toggle="tooltip"
+                            data-placement="right" titel="Enter Last Name" placeholder="Enter Your Last Name">
+                        <div class="alert alert-info" *ngIf="(LastName.touched) && (LastName.invalid)"
+                            style="margin-top: 5px;">
+                            <span *ngIf="LastName.errors.required"><strong>Last Name</strong> is Required</span>
+                            <span *ngIf="LastName.errors.minlength">MinLength Error</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="username">UserName</label>
+                        <input type="text" class="form-control" formControlName="username" data-toggle="tooltip"
+                            data-placement="right" titel="Enter Username" placeholder="Enter Your User Name">
+                        <div class="alert alert-info" *ngIf="(Username.touched) && (Username.invalid)"
+                            style="margin-top: 5px;">
+                            <span *ngIf="Username.errors.required"><strong>Username</strong> is Required</span>
+                            <span *ngIf="Username.errors.minlength">MinLength Error</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" formControlName="password" data-toggle="tooltip"
+                            data-placement="right" titel="Enter Password" placeholder="Enter Your Password">
+                        <div class="alert alert-info" *ngIf="(Password.touched) && (Password.invalid)"
+                            style="margin-top: 5px;">
+                            <span *ngIf="Password.errors.required"><strong>Password</strong> is Required</span>
+                            <span *ngIf="Password.errors.minlength">MinLength Error</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm_password">Confirm Password</label>
+                        <input type="password" class="form-control" formControlName="confirm_password"
+                            data-toggle="tooltip" data-placement="right" titel="Enter Confirm Password"
+                            placeholder="Enter Your Confirm Password">
+                        <div class="alert alert-info" *ngIf="(ConfirmPassword.touched) && (ConfirmPassword.invalid)"
+                            style="margin-top: 5px;">
+                            <span *ngIf="ConfirmPassword.errors.required"><strong>Confirm Password</strong> is Required</span>
+                            <span *ngIf="ConfirmPassword.errors.pattern">Password and Confirm Password does not
+                                mathc</span>
+                            <span *ngIf="Password.errors.minlength">MinLength Error</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-Mail</label>
+                        <input type="text" class="form-control" formControlName="email" data-toggle="tooltip"
+                            data-placement="right" titel="Enter Email Id" placeholder="Enter Your E-Mail Address">
+                        <div class="alert alert-info" *ngIf="(Email.touched) && (Email.invalid)"
+                            style="margin-top: 5px;">
+                            <span *ngIf="Email.errors.required"><strong>Email</strong> is Required</span>
+                            <span *ngIf="Email.errors.email">Invalid Email Format</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="role">Select Role:-</label>
+                        <select class="form-control" formControlName="role" data-toggle="tooltip" data-placement="right"
+                            title="Select Role">
+                            <option value="null">--Select Role--</option>
+                            <option value="Admin">Admin</option>
+                            <option value="User">User</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-success">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div [hidden]="!submitted">
+    <h4 style="font-weight: bold; font-style: italic; text-align: center; color:rgb(2, 25, 230);">Registered Successfully..!!</h4>
+</div>

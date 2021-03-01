@@ -1,0 +1,23 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="login-user" class="nav-link" class="btn-primary active" role="button">Login</a>
+      <a mat-list-item  routerLink="register-user" class="nav-link" class="btn-primary active" role="button">Resgistration</a>  
+      <a mat-list-item routerLink="user-list" class="nav-link" class="btn-primary active" role="button">View User</a>
+      <a mat-list-item routerLink="active-user" class="nav-link" class="btn-primary active" role="button">Active User</a>
+      <a mat-list-item routerLink="user-profile" class="nav-link" class="btn-primary active" role="button">User Profile</a>
+      <a mat-list-item routerLink="blog-list" class="nav-link" class="btn-primary active" role="button">Blog</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+    
+      <span style="font-style: italic;">OnlineCollaborate</span>
+    </mat-toolbar>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
