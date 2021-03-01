@@ -101,7 +101,8 @@ public class UserDaoImpl implements IUserDao {
 	public boolean deactiveUser(int userId) {
 		try {
 			User user=getUserById(userId);
-			user.setEnabled(false);		
+			user.setEnabled("false");	
+			user.setStatus("Inactive");
 			sessionFactory.getCurrentSession().update(user);
 			return true;
 		}
@@ -126,6 +127,26 @@ public class UserDaoImpl implements IUserDao {
 			return false;
 		}
 	
+	}
+
+	@Override
+	public boolean activeUser(int userId) {
+		try {
+			User user=getUserById(userId);
+			user.setEnabled("true");
+			user.setStatus("Active");
+			sessionFactory.getCurrentSession().update(user);
+			return true;
+		}
+		catch(Exception ex) {
+			ex.printStackTrace();
+			return false;
+		}
+	}
+
+	@Override
+	public List<User> getAllDeactiveUser() {
+		  return sessionFactory.getCurrentSession().createQuery("from User where enabled='false'",User.class).getResultList();
 	}
 
 }

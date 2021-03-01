@@ -47,5 +47,19 @@ public class UserController {
         user.setUserId(userId);
 		return userService.updateUser(user);
 	}
+	
+	@GetMapping("deactive-list")
+	public List<User> AllDeactiveUser(){
+		return userService.getAllDeactiveUser();
+	}
 
+	@PostMapping("active-user/{userId}")
+	public boolean activeUser(@RequestBody User user, @PathVariable("userId") int userId) {
+		return userService.activeUser(userId);
+	}
+	
+	@PostMapping("validate-user")
+	public User validateUser(@RequestBody User user) {
+		return userService.validateUser(user);
+	}
 }
