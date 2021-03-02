@@ -14,11 +14,20 @@
                     <h2 class="title">Hello there..!!</h2>
                     <p class="description">“click here to be part of <span  style="color:red; font-size: 150%"><strong>Online collaboration</strong> </span>” 
                     </p>
-                    <a href="" class="btn">Login / Registration</a>
+                    <div class="btn">
+                       <a mat-list-item  routerLink="login-user" class="nav-link" (click)="logInUser()" class="btn">Login</a>/<a mat-list-item  routerLink="register-user" class="nav-link" (click)="RegUser()" class="btn">Resgistration</a>  
+                      </div>
                 </div>
             </header>
         </div>
         <div class="shadow one"></div>
         <div class="shadow two"></div>
     </div>
+</div>
+<div class="pages">
+    <app-login-user></app-login-user>
+</div>
+
+<div class="pagess">
+    <app-register-user></app-register-user>
 </div>

@@ -92,4 +92,9 @@ export class RegisterUserComponent implements OnInit {
     this.registrationform.reset();
   }
 
+  logInUser() {
+    $(".pages").css("visibility","visible");
+    $(".peru").css("visibility","hidden");
+  }
+
 }

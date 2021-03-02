@@ -1,10 +1,19 @@
-<div class="main">
-  <form [formGroup]="loginform" action="#" #validateuser="ngForm" (ngSubmit)="validateUser()" class="form1">
-  <p class="sign" align="center">Sign in</p>
+<div class="container">
+  <div class="row">
+      <div class="col-md-6">
+          <div class="card">
+  <form [formGroup]="loginform" action="#" #validateuser="ngForm" (ngSubmit)="validateUser()" class="form1"  class="box">
+    <h1>Sign In</h1>
   
     <input type="text" class="form-control" name="username" required placeholder="Username" formControlName="username">
     <input type="password" class="form-control" name="password" required placeholder="Password" formControlName="password">
     <button type="submit" class="submit" align="center">Login</button>
+     <p class="">If YOU do not have account please clcik Registration</p>
+    <button type="submit" class="submit"  routerLink="register-user" (click)="RegUser()">Registration</button>
   </form>
 </div>
+</div>
+</div>
+</div>
+
 

@@ -1,6 +1,7 @@
-<h2 style="font-weight: bold; font-style: italic; text-align: center">Registration Form</h2>
+<div class="peru">
 <div class="main">
     <div class="row">
+        <h2 style="font-weight: bold; font-style: italic; text-align: center">Registration Form</h2>
         <div class="cols-sm-4">
             <div [hidden]="submitted" style="width: 400px;">
                 <form [formGroup]="registrationform" (ngSubmit)="register(register)">
@@ -75,7 +76,7 @@
 
                     <div class="form-group">
                         <label for="role">Select Role:-</label>
-                        <select class="form-control" formControlName="role" data-toggle="tooltip" data-placement="right"
+                        <select class="form-control" formControlName="role" class="optionbox" data-toggle="tooltip" data-placement="right"
                             title="Select Role">
                             <option value="null">--Select Role--</option>
                             <option value="Admin">Admin</option>
@@ -84,12 +85,15 @@
                     </div>
 
                     <button type="submit" class="btn btn-success">Submit</button>
+                    <p>Alredy have an account..?</p>
+                    <button routerLink="login-user"  (click)="logInUser()">Login</button>
 
                 </form>
             </div>
         </div>
+        <div [hidden]="!submitted">
+            <h4 style="font-weight: bold; font-style: italic; text-align: center; color:rgb(255, 251, 24);">Registered Successfully..!!</h4>
+        </div>
     </div>
 </div>
-<div [hidden]="!submitted">
-    <h4 style="font-weight: bold; font-style: italic; text-align: center; color:rgb(2, 25, 230);">Registered Successfully..!!</h4>
 </div>

@@ -79,10 +79,10 @@ header{ min-height: 100vh; width: 100%;
     font-size: 1.5rem;
 }
 
-.btn{ margin-top: 1rem; padding: 0.6rem 1.8rem;
-    background-color: #e20f2f; border: none; border-radius: 25px;
-    color: #fff; text-transform: uppercase; cursor: pointer;
-    text-decoration: none;
+.btn{  padding: 0.6rem 0.8rem;
+    background-color: #e20f2f; border-radius: 25px;
+    color: #fff; text-transform: uppercase; 
+  
 }
 
 .container.active .bar{ transform: rotate(360deg);
@@ -199,4 +199,19 @@ ul li.active a{ color: #e20f2f; }
 .container.active .main:hover{
     transform: perspective(1300px) rotateY(20deg) translateY(10px) 
                 translateZ(340px) scale(0.5);
+}
+
+.pages{
+    position:absolute;
+    top:10%;
+    left:30%;
+    visibility: hidden;
+
+}
+.pagess{
+    position:absolute;
+    top:-20%;
+    left:35%;
+    visibility: hidden;
+
 }

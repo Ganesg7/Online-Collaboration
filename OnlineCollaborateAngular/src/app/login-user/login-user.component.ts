@@ -4,6 +4,7 @@ import { User } from '../user';
 import { Observable, Subject } from 'rxjs';
 import { Validators, FormControl, FormGroup, FormBuilder } from '@angular/forms';
 import { DataTablesModule } from 'angular-datatables';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-user',
@@ -14,7 +15,7 @@ export class LoginUserComponent implements OnInit {
 
   user : User=new User();
   currentUser : any;  
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
     
@@ -35,7 +36,12 @@ export class LoginUserComponent implements OnInit {
         console.log(data);
         if(data!=null) {
           this.currentUser=data;
-          console.log(this.currentUser.firstName);
+         if(this.currentUser.role==="Admin"){
+           this.router.navigateByUrl("/nav");
+         }
+         else{
+
+         }
         }
         else {
           console.log("Object Empty");
@@ -51,6 +57,11 @@ export class LoginUserComponent implements OnInit {
 
   get Password() {
     return this.loginform.get ('password');
+  }
+ 
+  RegUser(){
+    $(".pagess").css("visibility","visible");
+    $(".card").css("visibility","hidden");
   }
 
 }
