@@ -40,7 +40,7 @@ export class LoginUserComponent implements OnInit {
            this.router.navigateByUrl("/nav");
          }
          else{
-
+          this.router.navigateByUrl("/");
          }
         }
         else {

@@ -19,7 +19,7 @@ public class UserDaoImpl implements IUserDao {
 	SessionFactory sessionFactory;
 	@Override
 	public List<User> userListbyStatus(String status) {
-	  String q="from User where status="+status+"'";
+	  String q="from User wheere status="+status+"'";
 	  Query query=sessionFactory.getCurrentSession().createQuery(q);
 		return query.getResultList();
 	}
