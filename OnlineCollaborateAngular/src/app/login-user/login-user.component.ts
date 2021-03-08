@@ -37,10 +37,10 @@ export class LoginUserComponent implements OnInit {
         if(data!=null) {
           this.currentUser=data;
          if(this.currentUser.role==="Admin"){
-           this.router.navigateByUrl("/nav");
+           this.router.navigateByUrl("/nav/" +`${this.currentUser.userId}`);
          }
          else{
-          this.router.navigateByUrl("/");
+          this.router.navigateByUrl("/nav-user/"+`${this.currentUser.userId}`);
          }
         }
         else {

@@ -1,4 +1,4 @@
-export class blog{
+export class Blog{
     blogId:number;
 	blogTitel:String;
     blogContent:String;

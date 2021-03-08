@@ -70,7 +70,7 @@
                         <div class="alert alert-info" *ngIf="(Email.touched) && (Email.invalid)"
                             style="margin-top: 5px;">
                             <span *ngIf="Email.errors.required"><strong>Email</strong> is Required</span>
-                            <span *ngIf="Email.errors.email">Invalid Email Format</span>
+                            <span *ngIf="Email.errors.email"><strong>Invalid Email </strong> Format</span>
                         </div>
                     </div>
 
@@ -85,9 +85,8 @@
                     </div>
 
                     <button type="submit" class="btn btn-success">Submit</button>
-                    <p>Alredy have an account..?</p>
-                    <button routerLink="login-user"  (click)="logInUser()">Login</button>
-
+                    <a routerLink="login-user"  (click)="logInUser()">Alredy have an account..?</a>
+    
                 </form>
             </div>
         </div>

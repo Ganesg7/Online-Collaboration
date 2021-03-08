@@ -4,13 +4,28 @@
     background-color:lightskyblue;
     }
 td {
-     border-right: solid 0.5px  rgb(10, 10, 10);
-     border-bottom:solid 0.5px black;
+     border-right: solid 0.3px  rgb(10, 10, 10);
+     border-bottom:solid 0.3px black;
        
       }
 th{
      border-top:solid 0.5px black;
      border-bottom:solid 0.5px black; ;
       }
+.panel-body th:hover{
+     color:white;
+}
+.panel-body tr:hover{
+     font-weight: bold;
+     color:blue;
+  }   
 
+  .panel button:hover{
+    font-weight: bolder;
+    color:black;
+  }
+  .panel-body td:nth-child(1n+1):hover{
+    color:black;
     
+  }
+  

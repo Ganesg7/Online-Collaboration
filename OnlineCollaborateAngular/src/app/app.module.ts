@@ -21,6 +21,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { BlogListComponent } from './blog-list/blog-list.component';
 import { ActiveUserComponent } from './active-user/active-user.component';
 import { HomeComponent } from './home/home.component';
+import { NavUserComponent } from './nav-user/nav-user.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { HomeComponent } from './home/home.component';
     UserProfileComponent,
     BlogListComponent,
     ActiveUserComponent,
-    HomeComponent
+    HomeComponent,
+    NavUserComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,

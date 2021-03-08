@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  height: 400px;
+  background: -webkit-gradient(linear, left top, right top, from(#b92b27), to(#1565c0));
+  background: linear-gradient(to right, #b92b27, #1565c0);
+}
+
+.box {
+  width: 500px;
+  padding: 40px;
+  position: absolute;
+  border: 2px solid #3498db;
+  border-radius: 25px;
+  background: brown;
+  text-align: center;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  margin-top: 100px;
+}
+
+.box input[type="text"],
+.box input[type="password"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 10px 10px;
+  width: 250px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.box h1 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.box h1:hover {
+  color: yellow;
+}
+
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
+  width: 300px;
+  border-color: #2ecc71;
+}
+
+.box a {
+  color: aliceblue;
+  text-indent: 30px;
+}
+
+.box a:hover {
+  color: yellow;
+}
+
+.box button[type="submit"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.box button[type="submit"]:hover {
+  background: #2ecc71;
+}
+
+::-webkit-input-placeholder {
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+
+::-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+
+::placeholder {
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
+}
+
+.pagess {
+  position: absolute;
+  top: -20%;
+  left: 35%;
+  visibility: hidden;
+}
+/*# sourceMappingURL=login-user.component.css.map */

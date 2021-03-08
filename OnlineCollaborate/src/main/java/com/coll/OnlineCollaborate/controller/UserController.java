@@ -62,4 +62,9 @@ public class UserController {
 	public User validateUser(@RequestBody User user) {
 		return userService.validateUser(user);
 	}
+	
+	@PostMapping("logout-user/{userId}")
+	public boolean logoutUser(@RequestBody User user, @PathVariable("userId") int userId) {
+		return userService.logoutUser(userId);
+	}
 }

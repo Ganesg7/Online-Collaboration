@@ -76,11 +76,34 @@ header{ min-height: 100vh; width: 100%;
 .description{ margin: 10px 0; text-align: center; width: 50%;
     font-size: 1.5rem;
 }
-
-.btn{  padding: 0.6rem 0.8rem;
-    background-color: #e20f2f; border-radius: 25px;
-    color: #fff; text-transform: uppercase; 
+#one h2:hover{
+    color:chartreuse;
+}
+#one .bts{
+    display:inline-block ;
+    padding: 0.6rem 0.8rem;
+    color:crimson;
+    background-color: transparent;
+    border:2px solid crimson;
+    font-size: 1.3rem;
+    border-radius: 25px;
+    transition: 3s ease;
+    transition-property: background-color, color;
+}
+#one .description:hover{
+    color:yellow;
+}
+#one .bts:hover{
+    color:white;
+    background-color: crimson;
+}
+.btn{ 
+ 
+     color: #fff; text-transform: uppercase; 
   
+}
+#one .btn:hover{
+    color:yellow;
 }
 
 .container.active .bar{ transform: rotate(360deg);

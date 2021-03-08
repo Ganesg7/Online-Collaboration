@@ -10,11 +10,14 @@ password varchar(30),
 email varchar(30),
 role varchar(30),
 status  varchar(10),
-isOnline boolean,
-enabled boolean,
+isOnline varchar(5),
+enabled varchar(5),
 primary key(userId)
 );
+select * from user;
+alter table User drop column userProfileId;
 
+drop table user;
 create table Blog (
  blogId integer not null auto_increment,
  blogContent varchar(255),

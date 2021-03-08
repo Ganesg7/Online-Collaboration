@@ -1,0 +1,46 @@
+.sidenav-container {
+  height: 10%;
+  width: 1560px;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.welcome {
+  position: relative;
+  font-style: oblique;
+  font-weight: large;
+  left: 250px;
+  top: 10px;
+}
+
+.welcome span {
+  color: crimson;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+  font-style: italic;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.logout {
+  position: absolute;
+  right: 250px;
+  color: blue;
+  font-size: small;
+  border-radius: 8px;
+  border-color: black;
+}
+/*# sourceMappingURL=nav-user.component.css.map */

@@ -1,0 +1,34 @@
+.panel {
+  position: relative;
+  left: 95px;
+  background-color: lightskyblue;
+}
+
+td {
+  border-right: solid 0.5px #0a0a0a;
+  border-bottom: solid 0.5px black;
+}
+
+th {
+  border-top: solid 0.5px black;
+  border-bottom: solid 0.5px black;
+}
+
+.panel th:hover {
+  color: white;
+}
+
+.panel tr:hover {
+  font-weight: bold;
+  color: blue;
+}
+
+.panel button:hover {
+  font-weight: bolder;
+  color: black;
+}
+
+.panel td:nth-child(1n+1):hover {
+  color: black;
+}
+/*# sourceMappingURL=user-list.component.css.map */

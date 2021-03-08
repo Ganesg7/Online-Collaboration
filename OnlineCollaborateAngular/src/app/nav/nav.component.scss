@@ -1,6 +1,6 @@
 .sidenav-container {
   height: 10%;
-  width: 100%;
+  width: 1560px;
 }
 
 .sidenav {
@@ -15,4 +15,27 @@
   position: sticky;
   top: 0;
   z-index: 1;
+}
+.logout{
+  position: absolute;
+  right:250px;
+  color:blue;
+  font-size: small;
+  border-radius: 8px;
+  border-color:black;
+}
+.welcome{
+  position:relative;
+  font-style: oblique;
+  font-weight:large;
+  left:250px;
+  top:10px;
+}
+.welcome span{
+  color:crimson;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+  font-style: italic;
+  font-weight: bold;
+  text-transform: uppercase;
 }

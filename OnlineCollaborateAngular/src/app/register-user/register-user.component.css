@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: -webkit-gradient(linear, left top, right top, from(#b92b27), to(#1565c0));
+  background: linear-gradient(to right, #b92b27, #1565c0);
+}
+
+.row {
+  width: 500px;
+  padding: 40px;
+  position: absolute;
+  border: 2px solid #3498db;
+  border-radius: 25px;
+  background: brown;
+  text-align: center;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  margin-top: 100px;
+}
+
+.row input[type="text"],
+.row input[type="password"],
+.row select {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 10px 10px;
+  width: 250px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.row label {
+  color: aliceblue;
+}
+
+.row h2, h4 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.row label:hover {
+  color: yellow;
+}
+
+.row h2:hover {
+  color: yellow;
+}
+
+.row a {
+  color: white;
+}
+
+.row a:hover {
+  color: yellow;
+}
+
+.row input[type="text"]:focus,
+.row input[type="password"]:focus,
+.row select:focus {
+  width: 300px;
+  border-color: #2ecc71;
+}
+
+.row option {
+  background-color: black;
+}
+
+.row button[type="submit"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.row
+button[type="submit"]:hover {
+  background: #2ecc71;
+}
+
+::-webkit-input-placeholder {
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+
+::-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+
+::placeholder {
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
+}
+
+.pages {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  visibility: hidden;
+}
+
+.form-control {
+  width: 55%;
+  border-radius: 5px;
+  border: 2px solid rgba(76, 46, 207, 0.856);
+  font-size: 13px;
+  font-family: monospace;
+}
+/*# sourceMappingURL=register-user.component.css.map */

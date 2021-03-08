@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {BlogService} from '../blog.service';
-import { blog } from '../blog';
+import { Blog } from '../blog';
 import { Observable, Subject } from 'rxjs';
 import { Validators, FormControl, FormGroup, FormBuilder } from '@angular/forms';
 import { DataTablesModule } from 'angular-datatables';
@@ -12,9 +12,13 @@ import { DataTablesModule } from 'angular-datatables';
 })
 export class BlogListComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private blogservice: BlogService) { }
+  blog: Blog =new Blog();
+  submitted = false;
   ngOnInit(): void {
+    this.submitted = false;
   }
+
+  
 
 }

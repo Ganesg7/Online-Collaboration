@@ -12,8 +12,7 @@ body {
     position: absolute;
     border: 2px solid #3498db;
     border-radius: 25px;
-    background: #3936e6;
-    
+    background:brown;
     text-align: center;
     transition: 0.25s;
     margin-top: 100px
@@ -42,18 +41,31 @@ body {
 .row h2,h4 {
     color: white;
     text-transform: uppercase;
-    font-weight: 500
+    font-weight: 500;
 }
-
+.row label:hover{
+   color: yellow;
+}
+.row h2:hover{
+    color:yellow;
+}
+.row a{
+    color:white;
+}
+.row a:hover{
+    color:yellow;
+}
 .row input[type="text"]:focus,
 .row input[type="password"]:focus,
 .row select:focus {
     width: 300px;
     border-color: #2ecc71
 }
+.row option{
+    background-color:black;
+}
 
-.row button,
- button[type="submit"] {
+.row  button[type="submit"] {
     border: 0;
     background: none;
     display: block;
@@ -68,7 +80,7 @@ body {
     cursor: pointer
 }
 
-.row button,
+.row 
 button[type="submit"]:hover {
     background: #2ecc71
 }
