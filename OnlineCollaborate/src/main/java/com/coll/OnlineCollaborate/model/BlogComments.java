@@ -31,8 +31,9 @@ public class BlogComments implements Serializable {
 	LocalDate currentDate;
 	@ManyToOne
 	@JoinColumn(name="BlogId")
-	Blog blog;
 	@JsonBackReference
+	Blog blog;
+	
 	public int getBlogCommentId() {
 		return blogCommentId;
 	}

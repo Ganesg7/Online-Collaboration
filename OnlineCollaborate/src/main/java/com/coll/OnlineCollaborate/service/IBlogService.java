@@ -15,6 +15,8 @@ public interface IBlogService {
 	Blog getBlogById(int blogId);
 	boolean addBlog(Blog blog);
 	boolean updateBlog(Blog blog);
+	boolean activeBlog(int blogId);
+	List<Blog> getAllDeactiveBlog();
 	boolean deleteBlog(int blogId);
 
 }

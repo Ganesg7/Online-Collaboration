@@ -23,6 +23,8 @@ import { ActiveUserComponent } from './active-user/active-user.component';
 import { HomeComponent } from './home/home.component';
 import { NavUserComponent } from './nav-user/nav-user.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { BloglistsComponent } from './bloglists/bloglists.component';
+import { ActiveBlogComponent } from './active-blog/active-blog.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { AboutUsComponent } from './about-us/about-us.component';
     ActiveUserComponent,
     HomeComponent,
     NavUserComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    BloglistsComponent,
+    ActiveBlogComponent
   ],
   imports: [
     BrowserModule,

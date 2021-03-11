@@ -9,21 +9,27 @@ import {UserProfileComponent} from './user-profile/user-profile.component';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
 import { NavUserComponent } from './nav-user/nav-user.component';
+import { BloglistsComponent } from './bloglists/bloglists.component';
+import { ActiveBlogComponent } from './active-blog/active-blog.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {path:'home', component: HomeComponent},
+  {path:'about-us', component: AboutUsComponent},
   {path:'nav/:Id', component:NavComponent, 
   children: [
+    { path: 'user-profile/:Id' , component: UserProfileComponent},
     { path: 'user-list', component: UserListComponent },
     { path: 'active-user' , component: ActiveUserComponent},
-  { path: 'blog-list' , component: BlogListComponent},
-  { path: 'user-profile/:Id' , component: UserProfileComponent}  
+  { path: 'blog-list/:Id' , component: BlogListComponent},
+  { path: 'bloglists' , component: BloglistsComponent},
+  { path: 'active-blog' , component: ActiveBlogComponent}
   ]
 } ,
   {path:'nav-user/:Id', component:NavUserComponent,
    children:[
-    { path: 'blog-list' , component: BlogListComponent},
+    { path: 'blog-list/:Id' , component: BlogListComponent},
     { path: 'user-profile/:Id' , component: UserProfileComponent}
    ]
 },

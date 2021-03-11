@@ -12,29 +12,28 @@ import { ActivatedRoute, Params } from '@angular/router';
   templateUrl: './user-profile.component.html',
   styleUrls: ['./user-profile.component.scss']
 })
-export class UserProfileComponent  implements OnInit {
+export class UserProfileComponent implements OnInit {
 
-  Id:number;
-  user:any;
-  constructor( private route: ActivatedRoute, private userservice: UserService){ }
+  Id: number;
+  user: any;
+  constructor(private route: ActivatedRoute, private userservice: UserService) { }
 
- 
-  ngOnInit(){
-    this.route.params.subscribe (
-     (params:Params)=> {
-       this.Id=+params["Id"];
-       console.log(this.Id);
- 
-       this.userservice.getUser(this.Id).subscribe (
-         data=>{
-           this.user=data;
-           console.log(this.user);
-         }
+
+  ngOnInit() {
+    this.route.params.subscribe(
+      (params: Params) => {
+        this.Id = +params["Id"];
+        console.log(this.Id);
+
+        this.userservice.getUser(this.Id).subscribe(
+          data => {
+            this.user = data;
+            console.log(this.user);
+          }
+        )
+      }
+
+
     )
-     }
-     
- 
-    )
- }
- }
- 
+  }
+}

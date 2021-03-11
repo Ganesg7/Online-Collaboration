@@ -1,5 +1,6 @@
 package com.coll.OnlineCollaborate.daoImpl;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.hibernate.SessionFactory;
@@ -45,6 +46,7 @@ public class BlogDaoImpl implements IBlogDao{
 	@Override
 	public boolean addBlog(Blog blog) {
 		try {
+			System.out.println(blog.getBlogPosted());
 			sessionFactory.getCurrentSession().save(blog);
 			return true;
 		}
@@ -69,6 +71,7 @@ public class BlogDaoImpl implements IBlogDao{
 	@Override
 	public boolean deleteBlog(int blogId) {
 		try {
+			System.out.println(blogId);
 			sessionFactory.getCurrentSession().delete(getBlogById(blogId));
 			return true;
 		}
@@ -76,6 +79,26 @@ public class BlogDaoImpl implements IBlogDao{
 			ex.printStackTrace();
 			return false;
 		}
+	}
+
+	@Override
+	public boolean activeBlog(int blogId) {
+		try {
+			Blog blog=getBlogById(blogId);
+			blog.setStatus("Posted");
+			sessionFactory.getCurrentSession().update(blog);
+			return true;
+		}
+		catch(Exception ex) {
+			ex.printStackTrace();
+			return false;
+		}
+	}
+
+	@Override
+	public List<Blog> getAllDeactiveBlog() {
+		  return sessionFactory.getCurrentSession().createQuery("from Blog where status='Waiting For Apporved'",Blog.class).getResultList();
+	
 	}
 
 }

@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScans;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
@@ -18,6 +19,9 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Configuration
 @ComponentScans(value= {@ComponentScan("com.coll.OnlineCollaborate"),
@@ -77,5 +81,14 @@ public class HibernateConfig {
 	viewResolver.setSuffix(".jsp");  
 	return viewResolver;  
 	    }   
+	
+	@Bean
+    public MappingJackson2HttpMessageConverter mappingJackson2HttpMessageConverter() {
+     MappingJackson2HttpMessageConverter jsonConverter = new MappingJackson2HttpMessageConverter();
+     ObjectMapper objectMapper = new ObjectMapper();
+     objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+     jsonConverter.setObjectMapper(objectMapper);
+     return jsonConverter;
+    }
 
 }

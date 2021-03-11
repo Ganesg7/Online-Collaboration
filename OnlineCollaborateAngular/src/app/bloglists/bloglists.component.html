@@ -1,0 +1,83 @@
+<div class="panel">
+    <div class="panel panel-default">
+        <h1 style="font-weight: bold; font-style: italic; text-align: center; ">Blog Lists</h1><br>
+        <div class="row" [hidden]="!deleteBlogMessage">
+  
+          <div class="col-sm-4"></div>
+          <div class="col-sm-4">
+            <div class="alert alert-info alert-dismissible">
+              <button type="button" class="close" data-dismiss="alert">×</button>
+              <strong>Blog has Been Deleted</strong>
+            </div>
+          </div>
+          <div class="col-sm-4"></div>
+        </div>
+      </div>
+      <div class="main">
+  <div class="panel-body" *ngFor="let blog of blogs"> {{blog.blogId}}.
+  
+        <div class="bg-white p-2">
+             <div class="d-flex flex-row user-info"> <!--<img class="rounded-circle" src="https://i.imgur.com/RpzrMR2.jpg" width="40"> -->
+                <div class="name"><span class="d-block font-weight-bold name">{{blog.username}}</span> &nbsp;-- <span>{{blog.blogPosted}}</span> &nbsp;<span class="date">{{blog.status}}</span></div>
+            </div>
+            <div class="mt-2">
+                <p class="comment-text">{{blog.blogContent}}</p>
+            </div>
+        </div>
+        <div class="bg-white">
+            <div class="d-flex2 ">
+                <i class="fa fa-thumbs-o-up"></i><span class="ml-1">Like</span> 
+                <i class="fa fa-commenting-o"></i><span class="ml-1">Comment</span>
+            </div>
+        </div>
+        <button (click)="deleteBlog(blog.blogId)" class='btn btn-primary'><i class="fa fa-futboll-0">Delete</i></button> &nbsp; &nbsp;
+             <button (click)="updatBlog(blog.blogId)" class='btn btn-info' data-toggle="modal"
+                data-target="#myModal">Update</button>
+        <hr>
+  </div>
+</div>
+    </div>
+
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <form [formGroup]="blogUpdateform"  (ngSubmit)="updateBlog()">
+           <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title" style="text-align: center">Update Blog</h4>
+
+        </div>
+
+        <div class="modal-body" *ngIf="bloglist">
+          <div [hidden]="isupdated">
+            <input type="hidden" class="form-control" formControlName="blogId" [(ngModel)]="bloglist.blogId">
+            <div class="form-group">
+              <label for="name">Blog Titel</label>
+              <input type="text" class="form-control" formControlName="blogTitel" [(ngModel)]="bloglist.blogTitel">
+            </div>
+
+            <div class="form-group">
+              <label for="name">Blog Content</label>
+              <textarea type="text" class="form-control" formControlName="blogContent" [(ngModel)]="bloglist.blogContent"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="name">Status</label>
+              <input type="text" class="form-control" formControlName="status" [(ngModel)]="bloglist.status">
+            </div>
+
+          </div>
+          <div [hidden]="!isupdated">
+            <h4>Blog Updated!</h4>
+          </div>
+          
+        </div>
+
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-success" [hidden]="isupdated">Update</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="changeisUpdate()">Close</button>
+        </div>
+
+        </form>
+      </div>
+    </div>
+

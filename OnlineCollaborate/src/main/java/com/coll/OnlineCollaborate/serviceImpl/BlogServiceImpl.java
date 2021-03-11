@@ -55,5 +55,17 @@ public class BlogServiceImpl implements IBlogService {
 		return blogDao.deleteBlog(blogId);
 	}
 
+	@Override
+	public boolean activeBlog(int blogId) {
+		// TODO Auto-generated method stub
+		return blogDao.activeBlog(blogId);
+	}
+
+	@Override
+	public List<Blog> getAllDeactiveBlog() {
+		// TODO Auto-generated method stub
+		return blogDao.getAllDeactiveBlog();
+	}
+
 	
 }

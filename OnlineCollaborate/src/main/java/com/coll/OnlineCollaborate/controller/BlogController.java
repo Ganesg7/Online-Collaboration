@@ -24,8 +24,7 @@ public class BlogController {
 	@Autowired
 	IBlogService blogService;
 	
-	@PostMapping("save-blog")
-	public boolean saveBlog(@RequestBody Blog blog)
+	@PostMapping("save-blog")public boolean saveBlog(@RequestBody Blog blog)
 	{
 		return blogService.addBlog(blog);
 	}
@@ -47,9 +46,20 @@ public class BlogController {
 		return blogService.getBlogById(blogId);
 	}
 	
-	@PostMapping("update-blog/{blog}")
-	public boolean updateBlog(@PathVariable("blog") Blog blog)
+	@PostMapping("update-blog/{blogId}")
+	public boolean updateBlog(@RequestBody Blog blog, @PathVariable("blogId") int blogId)
 	{
+		blog.setBlogId(blogId);
 		return blogService.updateBlog(blog);
+	}
+	
+	@GetMapping("deactiveBlog-list")
+	public List<Blog> AllDeactiveBlog(){
+		return blogService.getAllDeactiveBlog();
+	}
+
+	@PostMapping("active-blog/{blogId}")
+	public boolean activeBlog(@RequestBody Blog blog, @PathVariable("blogId") int blogId) {
+		return blogService.activeBlog(blogId);
 	}
 }

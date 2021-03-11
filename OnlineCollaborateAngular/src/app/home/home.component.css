@@ -203,6 +203,15 @@ header {
   color: yellow;
 }
 
+#one p span {
+  color: #da3a3a;
+  font-size: 150%;
+}
+
+#one p span:hover {
+  color: black;
+}
+
 .container.active .bar {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
