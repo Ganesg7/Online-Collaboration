@@ -148,4 +148,8 @@ h6 {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/*# sourceMappingURL=user-profile.component.css.map */
+
+#myModal{
+  position: relative;
+  left:200px;
+}

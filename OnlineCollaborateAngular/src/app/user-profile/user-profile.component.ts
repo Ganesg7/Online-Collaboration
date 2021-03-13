@@ -16,10 +16,14 @@ export class UserProfileComponent implements OnInit {
 
   Id: number;
   user: any;
+  users!: Observable <User[]>;
+  userlist:any;
+  isupdated =false;
   constructor(private route: ActivatedRoute, private userservice: UserService) { }
 
 
   ngOnInit() {
+    this.isupdated = false;
     this.route.params.subscribe(
       (params: Params) => {
         this.Id = +params["Id"];
@@ -35,5 +39,90 @@ export class UserProfileComponent implements OnInit {
 
 
     )
+  }
+  updatUser(id: number) {
+    this.userservice.getUser(id)
+      .subscribe(
+        (data) => {
+          this.userlist = data;
+          console.log(this.userlist);
+        }),
+        (error) => console.log(error);
+  }
+
+  userupdateform = new FormGroup({
+    userId: new FormControl(),
+    firstName: new FormControl(),
+    lastName: new FormControl(),
+    username: new FormControl(),
+    password: new FormControl(),
+    email: new FormControl(),
+    role: new FormControl(),
+    status: new FormControl(),
+    isOnline: new FormControl(),
+    enabled: new FormControl()
+  });
+
+  updateUser(updateusers: any) {
+    this.user = new User();
+    this.user.userId = this.UserId.value;
+    this.user.firstName = this.FirstName.value;
+    this.user.lastName = this.LastName.value;
+    this.user.username = this.UserName.value;
+    this.user.password = this.Password.value;
+    this.user.email = this.Email.value;
+    this.user.role = this.Role.value;
+    this.user.status = this.Status.value;
+    this.user.isOnline = this.IsOnline.value;
+    this.user.enabled = this.Enabled.value;
+    console.log(this.FirstName.value);
+
+
+    this.userservice.updateUser(this.user.userId, this.user).subscribe(
+      data => {
+        this.isupdated = true;
+        this.userservice.getUserList().subscribe(data => {
+          this.users = data
+        })
+      },
+        error => {
+          console.log(this.users);
+          console.log(error)});
+  }
+
+
+  get FirstName() {
+    return this.userupdateform.get('firstName');
+  }
+  get LastName() {
+    return this.userupdateform.get('lastName');
+  }
+  get UserName() {
+    return this.userupdateform.get('username');
+  }
+  get Password() {
+    return this.userupdateform.get('password');
+  }
+  get Email() {
+    return this.userupdateform.get('email');
+  }
+  get Role() {
+    return this.userupdateform.get('role');
+  }
+  get Status() {
+    return this.userupdateform.get('status');
+  }
+  get IsOnline() {
+    return this.userupdateform.get('isOnline');
+  }
+  get Enabled() {
+    return this.userupdateform.get('enabled');
+  }
+  get UserId() {
+    return this.userupdateform.get('userId');
+  }
+
+  changeisUpdate() {
+    this.isupdated = false;
   }
 }

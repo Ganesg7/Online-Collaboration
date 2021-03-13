@@ -28,7 +28,7 @@ public class UserDaoImpl implements IUserDao {
 	public List<User> getAllusers() {
 	
 
-      return sessionFactory.getCurrentSession().createQuery("from User",User.class).getResultList();
+      return sessionFactory.getCurrentSession().createQuery("from User where enabled='true'",User.class).getResultList();
 	}
 
 	@Override

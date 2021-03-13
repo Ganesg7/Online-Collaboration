@@ -12,6 +12,7 @@ import { NavUserComponent } from './nav-user/nav-user.component';
 import { BloglistsComponent } from './bloglists/bloglists.component';
 import { ActiveBlogComponent } from './active-blog/active-blog.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { MyBlogComponent } from './my-blog/my-blog.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -24,13 +25,15 @@ const routes: Routes = [
     { path: 'active-user' , component: ActiveUserComponent},
   { path: 'blog-list/:Id' , component: BlogListComponent},
   { path: 'bloglists' , component: BloglistsComponent},
-  { path: 'active-blog' , component: ActiveBlogComponent}
+  { path: 'active-blog' , component: ActiveBlogComponent},
+  { path: 'my-blog/:Id' , component: MyBlogComponent}
   ]
 } ,
   {path:'nav-user/:Id', component:NavUserComponent,
    children:[
     { path: 'blog-list/:Id' , component: BlogListComponent},
-    { path: 'user-profile/:Id' , component: UserProfileComponent}
+    { path: 'user-profile/:Id' , component: UserProfileComponent},
+    { path: 'my-blog/:Id' , component: MyBlogComponent}
    ]
 },
   { path: 'register-user', component: RegisterUserComponent },

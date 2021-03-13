@@ -41,7 +41,7 @@ public class BlogController {
 	}
 	
 	@GetMapping("blog/{blogId}")
-	public Blog blogById(@PathVariable("blogId") int blogId)
+	public Blog getblogById(@PathVariable("blogId") int blogId)
 	{
 		return blogService.getBlogById(blogId);
 	}
@@ -61,5 +61,10 @@ public class BlogController {
 	@PostMapping("active-blog/{blogId}")
 	public boolean activeBlog(@RequestBody Blog blog, @PathVariable("blogId") int blogId) {
 		return blogService.activeBlog(blogId);
+	}
+	
+	@GetMapping("myblogs/{userId}")
+	public List<Blog> getBlogbyUserId(@PathVariable("userId") int userId){
+		return blogService.getBlogbyUserId(userId);
 	}
 }

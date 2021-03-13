@@ -16,6 +16,35 @@
   top: 0;
   z-index: 1;
 }
+
+mat-sidenav{
+
+  background-color:darkgray;
+}
+mat-nav-list a{
+   border-radius: 20px;
+   background-color:darkgray;
+   color:black;
+   font-weight: bold;
+   
+}
+mat-toolbar{
+  background-color:mediumturquoise;
+  font-family: Verdana;
+}
+mat-toolbar span:nth-child(2){
+  position: relative;
+  border: 2px solid red;
+  right:-700px;
+  color:red;
+  border-radius: 5px;
+}
+mat-toolbar span:nth-child(2):hover{
+   
+    border-radius: 40px;
+}
+
+
 .welcome{
   position:relative;
   font-style: oblique;
@@ -39,4 +68,44 @@
   font-size: small;
   border-radius: 8px;
   border-color:black;
+}
+
+
+
+p{
+  left:130px;
+  top:10px;
+  position: relative;
+  color:blue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+  font-style: italic;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+
+.Profile{ height: 200px; width: 30%;
+  left:200px;
+  background: url("Photo.png") no-repeat top center / cover;
+  position: relative;
+}
+
+h1{
+   top:20px;
+  left:420px;
+  color:darkorange;
+  font-size: 30px;
+  font-style: italic;
+  position: relative;
+}
+.Profile span{
+  top:20px;
+  left:420px;
+  font-size:20px;
+  position: relative;
+}
+h1:hover{
+  color:mediumseagreen;
 }

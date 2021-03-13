@@ -45,4 +45,7 @@ export class NavUserComponent implements OnInit {
           data=>console.log(data)
         );
      }
+     Profile(){
+  $(".Profile").css("visibility","hidden");
+}
     }

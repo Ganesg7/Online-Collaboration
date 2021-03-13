@@ -67,5 +67,11 @@ public class BlogServiceImpl implements IBlogService {
 		return blogDao.getAllDeactiveBlog();
 	}
 
+	@Override
+	public List<Blog> getBlogbyUserId(int userId) {
+		// TODO Auto-generated method stub
+		return blogDao.getBlogbyUserId(userId);
+	}
+
 	
 }

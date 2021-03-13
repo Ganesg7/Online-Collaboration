@@ -1,0 +1,17 @@
+<div class="panel">
+    <div class="panel panel-default">
+        <div class="panel-body" *ngFor="let blogs of blog" > {{blogs.blogId}}.
+  
+            <div class="bg-white p-2">
+                 <div class="d-flex flex-row user-info"> <!--<img class="rounded-circle" src="https://i.imgur.com/RpzrMR2.jpg" width="40"> -->
+                    <div class="name"><span class="d-block font-weight-bold name">{{blogs.username}}</span> &nbsp;--
+                         <div *ngFor="let date of blogs.blogPosted"> <span>{{date.time}}</span> </div>&nbsp;<span class="date">{{blogs.status}}</span></div>
+                </div>
+                <div class="mt-2">
+                    <p class="comment-text">{{blogs.blogContent}}</p>
+                </div>
+            </div>
+            <div class="border"></div>
+      </div>
+    </div>
+</div>

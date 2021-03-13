@@ -38,5 +38,9 @@ export class BlogService {
 
   activeBlog(blogId: number): Observable<Object> {  
     return this.http.post(`${this.baseUrl}/active-blog/${blogId}`, {responseType: 'text'});  
-      } 
+      }
+  
+      getUserBlog(userId:number): Observable<Object>{
+        return this.http.get(`${this.baseUrl}/myblogs/${userId}`);
+      }
 }

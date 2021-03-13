@@ -1,147 +1,148 @@
-.main{
-    position:relative;
-  left:95px;
-}
 body {
-    background-color: #f9f9fa;
-    position: static;
-    left:100px;
-}
+    background-color: #eee;
 
-.padding {
-    padding: 3rem !important
 }
-
-.user-card-full {
-    overflow: hidden
-}
- h6:hover{
-    color:blue;
-    font-weight: bold;
+h5:hover{
+    color:blueviolet;
 }
 p:hover{
-    color:blue;
-    font-weight: bold;
+   color:black;
+   font-size: medium;
 }
-
 .card {
-    border-radius: 5px;
-    -webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
-    box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
-    border: none;
-    margin-bottom: 30px
+    top:-150px;
+    position: relative;
+    left:200px;
+    background-color: #fff;
+    width: 500px;
+    border-radius: 33px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 2rem !important
 }
 
-.m-r-0 {
-    margin-right: 0px
+.top-container {
+    display: flex;
+    align-items: center
 }
 
-.m-l-0 {
-    margin-left: 0px
+.profile-image {
+    border-radius: 10px;
+    border: 2px solid #5957f9
 }
 
-.user-card-full .user-profile {
-    border-radius: 5px 0 0 5px
+.name {
+    font-size: 15px;
+    font-weight: bold;
+    color: #272727;
+    position: relative;
+    top: 8px
 }
 
-.bg-c-lite-green {
-    background: -webkit-gradient(linear, left top, right top, from(#f29263), to(#ee5a6f));
-    background: linear-gradient(to right, #ee5a6f, #f29263)
+.mail {
+    font-size: 14px;
+    color: grey;
+    position: relative;
+    top: 2px
 }
 
-.user-profile {
-    padding: 20px 0
+.middle-container {
+    background-color: #eee;
+    border-radius: 12px
 }
 
-.card-block {
-    padding: 1.25rem
+.middle-container:hover {
+    border: 1px solid #5957f9
 }
 
-.m-b-25 {
-    margin-bottom: 25px
+.dollar-div {
+    background-color: #5957f9;
+    padding: 12px;
+    border-radius: 10px
 }
 
-.img-radius {
-    border-radius: 5px
+.round-div {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center
 }
 
-h6 {
-    font-size: 14px
+.dollar {
+    font-size: 16px !important;
+    color: #5957f9 !important;
+    font-weight: bold !important
 }
 
-.card .card-block p {
-    line-height: 25px
+.current-balance {
+    font-size: 15px;
+    color: #272727;
+    font-weight: bold
 }
 
-@media only screen and (min-width: 1400px) {
-    p {
-        font-size: 14px
-    }
+.amount {
+    color: black;
+    font-size: 16px;
+    font-weight: bold
 }
 
-.card-block {
-    padding: 1.25rem
+.dollar-sign {
+    font-size: 16px;
+    color: #272727;
+    font-weight: bold
 }
 
-.b-b-default {
-    border-bottom: 1px solid #e0e0e0
+.recent-border {
+    border-left: 2px solid #5957f9;
+    display: flex;
+    align-items: center
 }
 
-.m-b-20 {
-    margin-bottom: 20px
+.recent-border:hover {
+    border-bottom: 1px solid #dee2e6 !important
 }
 
-.p-b-5 {
-    padding-bottom: 5px !important
+.recent-orders {
+    font-size: 16px;
+    font-weight: 700;
+    color: Black;
+    margin-left: 2px
 }
 
-.card .card-block p {
-    line-height: 25px
+.wishlist {
+    font-size: 16px;
+    font-weight: 700;
+    color: #272727
 }
 
-.m-b-10 {
-    margin-bottom: 10px
+.wishlist-border:hover {
+    border-bottom: 1px solid #dee2e6 !important
 }
 
-.text-muted {
-    color: #919aa3 !important
+.fashion-studio {
+    font-size: 16px;
+    font-weight: 700;
+    color: #272727
 }
 
-.b-b-default {
-    border-bottom: 1px solid #e0e0e0
+.fashion-studio-border:hover {
+    border-bottom: 1px solid #dee2e6 !important
+}
+.recent-border span:nth-child(1):hover{
+    color:blue;
+}
+.recent-border span:nth-child(2):hover{
+    color:blue;
+}
+.recent-border span:nth-child(3):hover{
+    color:blue;
 }
 
-.f-w-600 {
-    font-weight: 600
-}
-
-.m-b-20 {
-    margin-bottom: 20px
-}
-
-.m-t-40 {
-    margin-top: 20px
-}
-
-.p-b-5 {
-    padding-bottom: 5px !important
-}
-
-.m-b-10 {
-    margin-bottom: 10px
-}
-
-.m-t-40 {
-    margin-top: 20px
-}
-
-.user-card-full .social-link li {
-    display: inline-block
-}
-
-.user-card-full .social-link li a {
-    font-size: 20px;
-    margin: 0 10px 0 0;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out
-}
+.button button{
+      position: relative;
+      left:505px;
+      top:-145px;
+  }

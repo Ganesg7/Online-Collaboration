@@ -46,4 +46,7 @@ logout(){
    );
 }
 
+Profile(){
+  $(".Profile").css("visibility","hidden");
+}
 }

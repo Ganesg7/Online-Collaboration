@@ -1,1 +1,33 @@
-<p>active-blog works!</p>
+<h1 style="font-weight: bold; font-style: italic; text-align: center; ">Waiting Blog List</h1><br>
+<div class="panel">
+    <div class="panel panel-default">
+        
+        <div class="blog" [hidden]="!isPosted">
+            <div class="cols-sm-4">
+                <div class="alert alert-info alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <h2 style="text-align: center; font-weight: bold;">Blog Posted</h2>
+                  </div>  
+            </div>
+        </div>
+
+        <div class="panel-body" *ngFor="let blog of blogs"> {{blog.blogId}}.
+  
+            <div class="bg-white p-2">
+                 <div class="d-flex flex-row user-info"> <!--<img class="rounded-circle" src="https://i.imgur.com/RpzrMR2.jpg" width="40"> -->
+                    <div class="name"><span class="d-block font-weight-bold name">{{blog.username}}</span> &nbsp;-- <span>{{blog.blogPosted}}</span> &nbsp;<span class="date">{{blog.status}}</span></div>
+                </div>
+                <div class="mt-2">
+                    <p class="comment-text">{{blog.blogContent}}</p>
+                </div>
+            </div>
+            <div class="border"></div>
+            <br/>
+            <div class="button">
+            <button (click)="postBlog(blog.blogId)" class='btn btn-info' data-toggle="modal"
+                            data-target="#myModal"><i class="fa fa-futboll-0">Active Blog</i></button>
+                        </div>
+        
+      </div>
+    </div>
+</div>

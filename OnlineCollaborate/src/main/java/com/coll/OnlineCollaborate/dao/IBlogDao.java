@@ -16,4 +16,5 @@ public interface IBlogDao {
 	boolean activeBlog(int blogId);
 	List<Blog> getAllDeactiveBlog();
 	boolean deleteBlog(int blogId);
+	List<Blog> getBlogbyUserId(int userId);
 }

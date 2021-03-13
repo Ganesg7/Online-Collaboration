@@ -25,6 +25,7 @@ import { NavUserComponent } from './nav-user/nav-user.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { BloglistsComponent } from './bloglists/bloglists.component';
 import { ActiveBlogComponent } from './active-blog/active-blog.component';
+import { MyBlogComponent } from './my-blog/my-blog.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ActiveBlogComponent } from './active-blog/active-blog.component';
     NavUserComponent,
     AboutUsComponent,
     BloglistsComponent,
-    ActiveBlogComponent
+    ActiveBlogComponent,
+    MyBlogComponent
   ],
   imports: [
     BrowserModule,

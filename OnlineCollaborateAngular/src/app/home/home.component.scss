@@ -2,7 +2,8 @@
 
 body{ font-family: 'Recursive', sans-serif; overflow: hidden; }
 
-.container{ max-height: 100vh;
+.container{ 
+            height:900px;
             width: 100%; background-color: #131414;
             background-image: linear-gradient(135deg, #131414 0%, #000000 100%); 
             transform-style: preserve-3d; overflow: hidden;
@@ -83,6 +84,8 @@ header{ min-height: 100vh; width: 100%;
     display:inline-block ;
     padding: 0.6rem 0.8rem;
     color:crimson;
+    bottom:200px;
+    right:50px;
     background-color: transparent;
     border:2px solid crimson;
     font-size: 1.3rem;
