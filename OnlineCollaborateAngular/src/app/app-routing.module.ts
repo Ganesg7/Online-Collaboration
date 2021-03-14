@@ -33,7 +33,8 @@ const routes: Routes = [
    children:[
     { path: 'blog-list/:Id' , component: BlogListComponent},
     { path: 'user-profile/:Id' , component: UserProfileComponent},
-    { path: 'my-blog/:Id' , component: MyBlogComponent}
+    { path: 'my-blog/:Id' , component: MyBlogComponent},
+    { path: 'bloglists' , component: BloglistsComponent}
    ]
 },
   { path: 'register-user', component: RegisterUserComponent },

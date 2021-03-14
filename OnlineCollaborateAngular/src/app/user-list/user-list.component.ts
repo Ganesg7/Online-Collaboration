@@ -24,7 +24,7 @@ export class UserListComponent implements OnInit {
   deleteMessage = false;
   userlist: any;
   isupdated = false;
-
+  isdeactived=false;
 
   ngOnInit() {
     this.isupdated = false;
@@ -137,6 +137,17 @@ export class UserListComponent implements OnInit {
 
   changeisUpdate() {
     this.isupdated = false;
+  }
+
+  deactiveUser(id: number) {
+    this.user.userId=id;
+    this.userservice.deactiveUser(this.user.userId).subscribe(data=> {
+      this.userservice.getUserList().subscribe(data=> {
+        this.users=data;
+    
+      })
+    },
+      error=>console.log(error));
   }
 
 

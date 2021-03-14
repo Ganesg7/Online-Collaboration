@@ -58,11 +58,6 @@ public class UserController {
 		return userService.activeUser(userId);
 	}
 	
-	@PostMapping("deactive-user/{userId}")
-	public boolean deactiveUser(@RequestBody User user, @PathVariable("userId") int userId) {
-		return userService.deactiveUser(userId);
-	}
-	
 	@PostMapping("validate-user")
 	public User validateUser(@RequestBody User user) {
 		return userService.validateUser(user);

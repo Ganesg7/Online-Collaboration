@@ -38,6 +38,9 @@ export class UserService {
         activeUser(userId: number): Observable<Object> {  
           return this.http.post(`${this.baseUrl}/active-user/${userId}`, {responseType: 'text'});  
             } 
+            deactiveUser(userId: number): Observable<Object> {  
+              return this.http.post(`${this.baseUrl}/deactive-user/${userId}`, {responseType: 'text'});  
+                } 
             checkUser(user: object): Observable<any> {
               return this.http.post(`${this.baseUrl}`+"validate-user", user);
             }
