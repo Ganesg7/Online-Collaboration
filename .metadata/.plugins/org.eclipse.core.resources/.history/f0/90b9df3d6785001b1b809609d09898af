@@ -1,7 +1,5 @@
 package com.coll.OnlineCollaborate;
 
-import static org.junit.Assert.assertEquals;
-
 import java.sql.SQLException;
 
 import org.junit.*;
@@ -39,9 +37,6 @@ class OnlineCollaborateApplicationTests {
 		actualUser.setStatus("Active");
 		actualUser.setIsOnline("false");
 		actualUser.setEnabled("true");
-		userDao.addUser(actualUser);
-		
-		User Expected=new User(8, "Kara", "Zoral", "supergirl", "kara", "karazoral@gmail.com", "User", "Active", "false", "true");
-		assertEquals(Expected.getUsername(), actualUser.getUsername());
+		User Exception=new User();
 	}
 }

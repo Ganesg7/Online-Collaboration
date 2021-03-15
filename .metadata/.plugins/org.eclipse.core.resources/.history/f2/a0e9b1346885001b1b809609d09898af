@@ -27,13 +27,6 @@ public class User extends DomainResponse implements Serializable {
 	private String status;
 	private String isOnline;
 	private String enabled;
-	public User(int i, String string, String string2, String string3, String string4, String string5, String string6,
-			String string7, String string8, String string9) {
-		// TODO Auto-generated constructor stub
-	}
-	public User() {
-		// TODO Auto-generated constructor stub
-	}
 	public int getUserId() {
 		return userId;
 	}

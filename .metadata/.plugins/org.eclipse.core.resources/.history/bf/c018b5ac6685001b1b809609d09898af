@@ -1,0 +1,27 @@
+package com.coll.OnlineCollaborate;
+
+import java.sql.SQLException;
+
+import org.junit.*;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.coll.OnlineCollaborate.dao.IBlogDao;
+import com.coll.OnlineCollaborate.dao.IUserDao;
+import com.coll.OnlineCollaborate.daoImpl.BlogDaoImpl;
+import com.coll.OnlineCollaborate.daoImpl.UserDaoImpl;
+
+@SpringBootTest
+class OnlineCollaborateApplicationTests {
+
+	IUserDao userDao=null;
+	IBlogDao blogDao=null;
+
+	@Before
+	public void setup() throws ClassNotFoundException, SQLException {
+	
+			userDao=new UserDaoImpl();
+			blogDao=new BlogDaoImpl();
+	}
+
+}
